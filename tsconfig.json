@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src/",
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@App/*": ["app/*"],
+      "@Entities/*": ["entities/"],
+      "@Features/*": ["features/"],
+      "@Pages/*": ["pages/"],
+      "@Processes/*": ["processes/"],
+      "@Shared/*" : ["shared/"],
+      "@Widgets/*": ["widgets/"],
+    },
+  },
+  "include": [
+    "src"
+  ],
+}
