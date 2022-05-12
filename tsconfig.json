@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "./src/",
-    "target": "es5",
+    "target": "es2022",
     "lib": [
       "dom",
       "dom.iterable",
@@ -25,15 +25,15 @@
     "jsx": "react-jsx",
     "paths": {
       "@App/*": ["app/*"],
-      "@Entities/*": ["entities/"],
-      "@Features/*": ["features/"],
-      "@Pages/*": ["pages/"],
-      "@Processes/*": ["processes/"],
-      "@Shared/*" : ["shared/"],
-      "@Widgets/*": ["widgets/"],
+      "@Entities/*": ["entities/*"],
+      "@Features/*": ["features/*"],
+      "@Pages/*": ["pages/*"],
+      "@Processes/*": ["processes/*"],
+      "@Shared/*" : ["shared/*"],
+      "@Widgets/*": ["widgets/*"],
     },
   },
   "include": [
     "src"
-  ],
+  ]
 }

@@ -1,11 +1,12 @@
 import '@App/styles/index.scss';
+import { TasksList } from "@Pages/tasks";
 
-const App = () => {
+export const App = () => {
+  const tasks = [{text: 'Сделать пиццу'}, {text: 'Выучить английский'}, {text: 'Купить доллары'}]
+
   return (
     <div className="app">
-      APP COMPONENT
+      <TasksList tasksList={tasks}/>
     </div>
   );
 }
-
-export default App;
