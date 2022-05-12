@@ -1,30 +1,19 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('./plugins/HtmlWebpackPlugin');
 
 module.exports = {
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'webpack Boilerplate',
-      template: path.resolve(__dirname, '../public/index.html'),
-      filename: 'index.html',
-      clean: true,
-    }),
+    HtmlWebpackPlugin,
   ],
   entry: path.resolve(__dirname, '../src', 'index.tsx'),
   output: {
     path: path.resolve(__dirname, '../build'),
     filename: '[name]-[contenthash].js',
     chunkFilename: '[id]_[contenthash].js',
-
+    clean: true,
   },
-  mode: 'development',
-  devServer: {
-    static: {
-      directory: path.join(__dirname, '../public'),
-    },
-    compress: true,
-    hot: true,
-    port: 8080,
+  optimization: {
+    moduleIds: 'deterministic',
   },
   module: {
     rules: [
@@ -32,10 +21,6 @@ module.exports = {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-      },
-      {
-        test: /\.(scss|css)$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
