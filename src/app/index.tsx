@@ -1,4 +1,4 @@
-import '@App/styles/index.scss';
+import '@App/styles/index.css';
 import { TasksList } from "@Pages/tasks";
 
 export const App = () => {

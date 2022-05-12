@@ -14,16 +14,11 @@ const DEV_CONFIG = {
     hot: true,
     port: 8080,
   },
-  devtool: 'eval-cheap-module-source-map',
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: ['style-loader', 'css-loader', 'postcss-loader'],
-      },
-      {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
   },

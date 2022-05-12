@@ -13,16 +13,11 @@ const PROD_CONFIG = {
     }),
     RetryChunkLoadPlugin,
   ],
-  devtool: 'hidden-source-map',
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
-      },
-      {
-        test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
   },

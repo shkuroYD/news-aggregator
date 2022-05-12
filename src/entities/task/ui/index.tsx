@@ -6,7 +6,7 @@ export const Task = (props: IProps) => {
     const { text } = props;
 
     return (
-        <div>
+        <div className="app-blocks">
             { text }
         </div>
     );
