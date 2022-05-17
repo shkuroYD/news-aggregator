@@ -1,0 +1,9 @@
+.header {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.reloadBtn {
+    margin-left: 16px;
+}

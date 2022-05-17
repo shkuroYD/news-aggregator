@@ -1,0 +1,8 @@
+.mainPage {
+    max-width: 1400px;
+    min-width: 1000px;
+    flex-grow: 1;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 20px;
+}
